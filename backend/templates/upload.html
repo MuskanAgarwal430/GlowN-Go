@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Skin Image</title>
+</head>
+<body>
+    <h1>Upload Your Skin Image for Analysis</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <!-- Image Upload -->
+        <label for="file">Upload Image:</label>
+        <input type="file" name="file" id="file" required><br><br>
+
+        <!-- Skin Type Selection -->
+        <label for="type">Skin Type:</label>
+        <select name="type" id="type">
+            <option value="Dry_skin">Dry</option>
+            <option value="Normal_skin">Normal</option>
+            <option value="Oil_skin">Oily</option>
+        </select><br><br>
+
+        <!-- Skin Tone Selection -->
+        <label for="tone">Skin Tone:</label>
+        <select name="tone" id="tone">
+            <option value="1">Fair to Light</option>
+            <option value="2">Light to Medium</option>
+            <option value="3">Medium to Dark</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

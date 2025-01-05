@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Analysis Results</title>
+</head>
+<body>
+    <h1>Your Skin Analysis Results</h1>
+    <p><strong>Skin Type:</strong> {{ skin_type }}</p>
+    <p><strong>Acne Type:</strong> {{ acne_type }}</p>
+    <p><strong>Skin Tone:</strong> {{ tone }}</p>
+
+    <h2>Recommended Products</h2>
+    <ul>
+        {% for product in recommendations['general'] %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Makeup Recommendations</h2>
+    <ul>
+        {% for makeup in recommendations['makeup'] %}
+            <li>{{ makeup }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Go back</a>
+</body>
+</html>
